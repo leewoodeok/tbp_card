@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>THE BALPAN - 이우덕</title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THE BALPAN 명함</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: url('bg_card.jpg') no-repeat center center fixed;
+      background-size: contain;
+      font-family: sans-serif;
+    }
+    .card-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1384px;
+      height: 768px;
+      transform: translate(-50%, -50%);
+    }
+    .text {
+      position: absolute;
+      color: white;
+      font-size: 24px;
+      font-weight: 500;
+    }
+    .name { top: 140px; left: 880px; font-size: 30px; font-weight: bold; }
+    .role { top: 140px; left: 760px; }
+    .tel1 { top: 200px; left: 780px; }
+    .tel2 { top: 240px; left: 780px; }
+    .tel3 { top: 280px; left: 780px; }
+    .email { top: 320px; left: 780px; font-weight: bold; }
+    .addr1 { top: 360px; left: 780px; }
+    .addr2 { top: 400px; left: 780px; }
+    a { color: white; text-decoration: none; }
+    @media screen and (max-width: 1400px) {
+      body { background-size: cover; }
+      .card-overlay { transform: scale(0.7) translate(-72%, -72%); transform-origin: top left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card-overlay">
+    <div class="text role">관리부장</div>
+    <div class="text name">(유) 더 발판</div>
+    <div class="text tel1"><a href="tel:0333458588">☎ 033-345-8588</a></div>
+    <div class="text tel2"><a href="tel:0333437072">📠 033-343-7072</a></div>
+    <div class="text tel3"><a href="tel:01030354473">📱 010-3035-4473</a></div>
+    <div class="text email"><a href="mailto:so--simple@naver.com">✉ so--simple@naver.com</a></div>
+    <div class="text addr1">🏠 강원특별자치도 횡성군 우천면</div>
+    <div class="text addr2">우천제2농공단지로 65-69</div>
+  </div>
+</body>
 </html>
