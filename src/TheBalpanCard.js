@@ -1,48 +1,55 @@
-import { Mail, Phone, MapPin } from "lucide-react";
-
 export default function TheBalpanCard() {
   return (
     <div style={{
       minHeight: '100vh',
-      backgroundColor: 'white',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      padding: '1rem'
+      fontFamily: 'sans-serif',
+      background: 'linear-gradient(to right, white 50%, #1f2937 50%)',
+      position: 'relative'
     }}>
+      {/* 황토색 곡선 배경 장식 */}
+      <svg style={{
+        position: 'absolute',
+        left: '49%',
+        top: 0,
+        bottom: 0,
+        height: '100%',
+        zIndex: 1
+      }} width="80" viewBox="0 0 100 500" preserveAspectRatio="none">
+        <path d="M0,0 C100,200 0,300 100,500 L0,500 Z" fill="#c4a259"/>
+      </svg>
+
       <div style={{
-        width: '100%',
-        maxWidth: '400px',
+        backgroundColor: '#1f2937',
+        color: 'white',
         borderRadius: '1rem',
-        boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-        border: '1px solid #e5e7eb',
-        padding: '1.5rem',
-        textAlign: 'center'
+        padding: '2rem',
+        width: '100%',
+        maxWidth: '420px',
+        boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
+        zIndex: 2,
+        position: 'relative'
       }}>
-        <h1 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#111827' }}>THE BALPAN</h1>
-        <p style={{ fontSize: '0.875rem', color: '#6b7280' }}>더 발판</p>
+        <h1 style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>(유) 더 발판</h1>
+        <p style={{ fontWeight: '500', marginBottom: '1rem' }}>관리부장 <strong style={{ fontWeight: 700 }}>이우덕</strong></p>
 
-        <p style={{ marginTop: '1rem', fontWeight: '600', color: '#1f2937' }}>CEO 김형일</p>
-
-        <div style={{ marginTop: '1rem' }}>
-          <a href="tel:0333458588" style={linkStyle}><Phone size={16} />&nbsp;033-345-8588</a><br/>
-          <a href="tel:01032153344" style={linkStyle}><Phone size={16} />&nbsp;010-3215-3344</a><br/>
-          <a href="tel:0333437072" style={linkStyle}><Phone size={16} />&nbsp;033-343-7072</a><br/>
-          <a href="mailto:ahdongdo34@naver.com" style={linkStyle}><Mail size={16} />&nbsp;ahdongdo34@naver.com</a><br/>
-          <a href="https://map.kakao.com/?q=강원특별자치도 횡성군 우천면 제2농공단지로65-69"
-            target="_blank" rel="noopener noreferrer" style={linkStyle}>
-            <MapPin size={16} />&nbsp;강원 횡성군 우천면 제2농공단지로 65-69
-          </a>
+        {/* 아이콘 + 정보 */}
+        <div style={{ fontSize: '0.95rem', lineHeight: '2' }}>
+          <p><span style={iconStyle}>☎</span> 033-345-8588</p>
+          <p><span style={iconStyle}>🖨</span> 033-343-7072</p>
+          <p><span style={iconStyle}>📱</span> 010-3035-4473</p>
+          <p><span style={iconStyle}>✉</span> <strong>so--simple@naver.com</strong></p>
+          <p><span style={iconStyle}>🏠</span> 강원특별자치도 횡성군 우천면<br/>우천제2농공단지로 65-69</p>
         </div>
       </div>
     </div>
   );
 }
 
-const linkStyle = {
-  display: 'inline-flex',
-  alignItems: 'center',
-  color: '#2563eb',
-  textDecoration: 'none',
-  margin: '0.25rem 0'
+const iconStyle = {
+  display: 'inline-block',
+  width: '1.8rem',
+  textAlign: 'center'
 };
